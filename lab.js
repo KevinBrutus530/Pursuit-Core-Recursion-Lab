@@ -27,6 +27,13 @@ const sumNum = (num) => {
 // multArr([5, 5, 1, 2]); //returns 50
 // ```
 
+const multArr = (arr) => {
+    if (arr.length === 0) return 1;
+    let el = arr.pop()
+    return multArr(arr) * el
+}
+console.log(multArr([2,3,5]))
+
 // - ### Concatenate array
 
 // Write a function called `concatArr` that takes in an array of strings as an argument and recursively concatenates the strings together into a single string, with spaces between each original string.
