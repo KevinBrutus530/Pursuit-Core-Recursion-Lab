@@ -43,6 +43,13 @@ console.log(multArr([2,3,5]))
 // concatArr(['or', 'just', 'the', 'end', 'of', 'time']); //returns 'or just the end of time'
 // ```
 
+const concatArr = (arr) => {
+    if(arr.length === 0) return "";
+    let joinStr = arr.pop()
+    return concatArr(arr) + joinStr + " "
+}
+
+console.log(concatArr(['is', 'it', 'tomorrow']))
 // - ### Sum evens
 
 // Write a function called `sumEvens` that takes in an array of numbers as an argument and recursively sums only the even numbers in the array.
