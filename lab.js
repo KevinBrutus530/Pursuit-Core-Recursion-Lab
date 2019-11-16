@@ -59,6 +59,27 @@ console.log(concatArr(['is', 'it', 'tomorrow']))
 // sumEvens([10, 5, 1, 2, 12]); //returns 24
 // ```
 
+// const sumEvens = (arr) => {
+//     if (arr.length === 0) return;
+//     let el = arr.pop()
+//     if (el % 2 === 0) {
+//         return sumEvens(arr) + el
+//     } else {
+//         return 0
+//     }
+// }
+
+// const sumEvens = (arr, i = 0, sum = 0) => {
+//     if (arr.length === 0) return;
+//     if (arr[i] % 2 === 0) {
+//         sum += arr[i]
+//         i++ 
+//         return sumEvens(arr, 1, sum)
+//     } else {
+//         return 0
+//     }
+// }
+console.log(sumEvens([2,3,5,6]))
 // - ### Recursive range
 
 // Write a function called `range` which takes in two numbers (num1, num2) as arguments. The function should return an array of numbers between num1 and num2.
