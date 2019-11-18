@@ -127,3 +127,10 @@ const tripleStep = (n) => {
 // coinCombos(25); //returns 13
 // coinCombos(60); //returns 73
 // ```
+
+const coinCombos = (n) => {
+    if(n <= 1) return 1;
+    let change = [1, 5, 10, 25]
+    // let result = 0
+
+}
