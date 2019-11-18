@@ -82,16 +82,14 @@ const sumEvens = (arr) => {
 // ```
 
 const range = (x,y) => {
+    if(x === y) return y;
     let results = [];
-    if(x === y){
-        return y;
-    }
     results.push(x);
-return  results.concat(range(x + 1,y));
+    return results.concat(range(x + 1,y));
 }
 
-// console.log(range(2, 10))
-// console.log(range(17, 20))
+console.log(range(2, 10))
+console.log(range(17, 20))
 
 // - ### Triple Step
 
@@ -104,6 +102,16 @@ return  results.concat(range(x + 1,y));
 // tripleStep(10); //returns 274
 // ```
 
+const tripleStep = (n) => {
+    if(n === 0 || n === 1) return 1;
+    if(n === 2) return 2;
+    return tripleStep(n-3) + tripleStep(n-2) + tripleStep(n-1)
+}
+
+// console.log(tripleStep(3)); //returns 4
+// console.log(tripleStep(4)); //returns 7
+// console.log(tripleStep(5)); //returns 13
+// console.log(tripleStep(10)); //returns 274
 // Source: Cracking the Coding Interview
 
 // - ### Coin Combos
