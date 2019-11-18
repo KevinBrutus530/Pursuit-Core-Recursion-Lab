@@ -69,8 +69,8 @@ const sumEvens = (arr) => {
     }
 }
 
-console.log(sumEvens([2,3,5,6]))
-console.log(sumEvens([10, 5, 1, 2, 12]))
+// console.log(sumEvens([2,3,5,6]))
+// console.log(sumEvens([10, 5, 1, 2, 12]))
 
 // - ### Recursive range
 
@@ -81,6 +81,17 @@ console.log(sumEvens([10, 5, 1, 2, 12]))
 // range(17,20); // returns [17, 18, 19, 20]
 // ```
 
+const range = (x,y) => {
+    let results = [];
+    if(x === y){
+        return y;
+    }
+    results.push(x);
+return  results.concat(range(x + 1,y));
+}
+
+// console.log(range(2, 10))
+// console.log(range(17, 20))
 
 // - ### Triple Step
 
